@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('excerpt');
             $table->string('slug')->unique();
             $table->string('title');
-            $table->string('body');
+            $table->string('body', 1080);
             $table->timestamp('created_at');
             $table->timestamp('updated_at');
         });

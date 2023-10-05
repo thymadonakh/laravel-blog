@@ -4,6 +4,6 @@
     <h2 class="text-xl font-semibold">{{$post->title}}</h2>
     <p class="text-gray-500">Published on {{$post->created_at->diffForHumans()}}</p>
     <p class="mt-2">{{$post->excerpt}}</p>
-    <p class="mt-2">{{$post->body}}</p>
     <a href="/posts/{{$post->slug}}" class="mt-4 text-blue-500 hover:underline">Read more</a>
 </div>
+

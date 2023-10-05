@@ -7,14 +7,18 @@
     <!-- Include Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
+
 </head>
 <body class="bg-gray-100 font-sans flex flex-col min-h-screen">
 
     <!-- Header -->
     <header class="bg-blue-500 p-4 text-white">
         <div class="container mx-auto">
-            <h1 class="text-3xl font-bold">My Blog</h1>
-            <p class="text-sm">Exploring the world through words</p>
+            <a href="/">
+                <img src="https://img.logoipsum.com/283.svg" alt="logo">
+                <p class="text-sm pt-4">Exploring the world through words</p>
+            </a>
         </div>
     </header>
 

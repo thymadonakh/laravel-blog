@@ -12,6 +12,8 @@ class PostController extends Controller
         return view('index', ['name' => 'Babe']);
     }
 
+    
+
     public function create() {
         return view('posts.create');
     }

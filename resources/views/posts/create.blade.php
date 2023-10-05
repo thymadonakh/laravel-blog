@@ -4,7 +4,7 @@
             <h1 class="text-2xl font-semibold mb-4">Create a New Post</h1>
             <form action="/admin/posts/create" method="POST">
                 @csrf
-                <input type="hidden" name="user_id" value="1">
+                <input type="hidden" name="user_id" value="{{ auth()->id() }}">
                 <div class="mb-4">
                     <label for="title" class="block text-gray-600">Title</label>
                     <input type="text" id="title" name="title" value="{{ old('title') }}" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500" required>
@@ -41,5 +41,16 @@
             </form>
         </div>
     </div>
+    <div id="editor">
+        <p>This is some sample content for my new WYSIWYG editor.</p>
+    </div>
+    <script>
+        ClassicEditor
+            .create( document.querySelector( '#editor' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
+
 
 </x-layout>

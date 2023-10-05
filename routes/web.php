@@ -30,6 +30,13 @@ Route::get('posts/{post:slug}', function(Post $post){
     ]);
 });
 
+Route::get('posts/author/{post:user_id}', function(Post $post){
+    return view('posts', [
+        'posts' => Post::where('user_id', $post->user_id)->get()
+    ]);
+});
+
+
 Route::get('/register', [RegisterController::class, 'register'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store'])->middleware('guest');
 

@@ -10,7 +10,9 @@
         @auth
         <ul class="flex space-x-4">
             <!-- <li><a href="#" class="hover:text-blue-500">Welcome {{ auth()->user()->name }}!</a></li> -->
+            @if (auth()->user()->isAdmin === 1)
             <li><a href="/admin/posts/create" class="hover:text-blue-500">Create Post</a></li>
+            @endif
             <li>
                 <form action="/logout" method="POST">
                     @csrf
